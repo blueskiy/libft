@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fimachad <fimachad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/16 19:06:55 by fimachad          #+#    #+#             */
-/*   Updated: 2022/05/16 19:59:12 by fimachad         ###   ########.fr       */
+/*   Created: 2022/05/17 20:53:17 by fimachad          #+#    #+#             */
+/*   Updated: 2022/05/17 21:02:22 by fimachad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
-{
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	else
-		return (0);
-}
+#ifndef LIBFT_H_
+#define LIBFT_H_
+
+int	ft_isalpha(int c);
+int	ft_isdigit(int d);
+int ft_isalnum(int c);
+
+#endif
