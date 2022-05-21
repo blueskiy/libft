@@ -6,13 +6,13 @@
 /*   By: fimachad <fimachad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 20:21:26 by fimachad          #+#    #+#             */
-/*   Updated: 2022/05/17 21:41:56 by fimachad         ###   ########.fr       */
+/*   Updated: 2022/05/21 10:11:29 by fimachad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
 {
-	if (c >= 0  && c <= 127)
+	if (c >= 0 && c <= 127)
 		return (1);
 	else
 		return (0);
