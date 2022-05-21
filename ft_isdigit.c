@@ -6,13 +6,13 @@
 /*   By: fimachad <fimachad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 19:59:31 by fimachad          #+#    #+#             */
-/*   Updated: 2022/05/16 20:01:06 by fimachad         ###   ########.fr       */
+/*   Updated: 2022/05/17 21:28:32 by fimachad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int d)
+int	ft_isdigit(int c)
 {
-	if (d >= 48 && d <= 57)
+	if (c >= 48 && c <= 57)
 		return (1);
 	else
 		return (0);
