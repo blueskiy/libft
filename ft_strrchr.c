@@ -6,7 +6,7 @@
 /*   By: fimachad <fimachad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 18:46:43 by fimachad          #+#    #+#             */
-/*   Updated: 2022/05/21 19:31:13 by fimachad         ###   ########.fr       */
+/*   Updated: 2022/05/23 21:15:02 by fimachad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,14 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int i;
+	int	i;
 
-	i = 0;
-	while (s[i] != '\0')
+	i = ft_strlen(s);
+	while (i >= 0)
 	{
 		if (s[i] == c)
-		{
 			return ((char *)&s[i]);
-		}
-		i++;
+		i--;
 	}
 	return (NULL);
 }
