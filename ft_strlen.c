@@ -6,7 +6,7 @@
 /*   By: fimachad <fimachad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 13:19:30 by fimachad          #+#    #+#             */
-/*   Updated: 2022/05/21 16:04:26 by fimachad         ###   ########.fr       */
+/*   Updated: 2022/06/06 19:58:12 by fimachad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ size_t	ft_strlen(const char *s)
 
 	i = 0;
 	while (s[i] != '\0')
-	{
 		i++;
-	}
 	return (i);
 }

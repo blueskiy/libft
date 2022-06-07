@@ -18,7 +18,8 @@ SRCS	=	ft_isalnum.c\
 			ft_strdup.c\
 			ft_memchr.c\
 			ft_memcmp.c\
-			ft_strnstr.c
+			ft_strnstr.c\
+			ft_strlcat.c
 
 OBJS	= 	${SRCS:.c=.o}
 
