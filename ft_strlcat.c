@@ -6,7 +6,7 @@
 /*   By: fimachad <fimachad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 11:26:19 by fimachad          #+#    #+#             */
-/*   Updated: 2022/06/06 21:55:47 by fimachad         ###   ########.fr       */
+/*   Updated: 2022/06/08 20:02:18 by fimachad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
-	size_t total;
+	size_t	total;
 	size_t	src_len;
 	size_t	dst_len;
 

@@ -6,7 +6,7 @@
 /*   By: fimachad <fimachad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 19:22:07 by fimachad          #+#    #+#             */
-/*   Updated: 2022/06/06 22:16:55 by fimachad         ###   ########.fr       */
+/*   Updated: 2022/06/08 19:58:31 by fimachad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,11 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	while (i < len)
 	{
 		j = 0;
-		while (n_needle[j] == n_haystack[i])
+		while (n_needle[j] == n_haystack[i + j])
 		{
-			if (n_needle[j + 1] == '\0')
-				return (&n_haystack[i - j]);
+			if (n_needle[j + 1] == '\0' && ((i + j + 1) <= len))
+				return (&n_haystack[i]);
 			j++;
-			i++;
 		}
 		i++;
 	}
