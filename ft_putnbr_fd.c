@@ -6,7 +6,7 @@
 /*   By: fimachad <fimachad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 19:37:45 by fimachad          #+#    #+#             */
-/*   Updated: 2022/06/10 21:57:41 by fimachad         ###   ########.fr       */
+/*   Updated: 2022/06/11 09:40:26 by fimachad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	if (n > 9)
 		ft_putnbr_fd(n / 10, fd);
-	if(!(nbr < 0))
+	if (!(nbr < 0))
 		ft_putchar_fd((n % 10) + 48, fd);
 	else
 		ft_putchar_fd((n % 10) + 49, fd);

@@ -6,7 +6,7 @@
 /*   By: fimachad <fimachad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 15:40:08 by fimachad          #+#    #+#             */
-/*   Updated: 2022/06/04 15:45:52 by fimachad         ###   ########.fr       */
+/*   Updated: 2022/06/11 10:01:39 by fimachad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,14 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
+	if (count == 0 || size == 0)
+	{
+		count = 1;
+		size = 1;
+	}
 	ptr = malloc(count * size);
 	if (ptr == NULL)
-		return (NULL);
+		return(NULL);
 	ft_bzero(ptr, count * size);
 	return (ptr);
 }
