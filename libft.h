@@ -6,13 +6,14 @@
 /*   By: fimachad <fimachad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 20:53:17 by fimachad          #+#    #+#             */
-/*   Updated: 2022/06/08 20:02:45 by fimachad         ###   ########.fr       */
+/*   Updated: 2022/06/10 19:37:38 by fimachad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+# include <unistd.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -36,5 +37,10 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+int		ft_atoi(const char *str);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif
