@@ -6,12 +6,11 @@
 /*   By: fimachad <fimachad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 14:12:57 by fimachad          #+#    #+#             */
-/*   Updated: 2022/06/11 15:00:00 by fimachad         ###   ########.fr       */
+/*   Updated: 2022/06/13 14:40:24 by fimachad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
-#include <stdio.h>
+#include "libft.h"
 
 static size_t    calculate_int_length(int i)
 {
@@ -28,9 +27,9 @@ static size_t    calculate_int_length(int i)
 
 char    *ft_itoa(int n)
 {
-    size_t	c;
-    char	*s;
-    int		is_negative;
+    size_t    c;
+    char    *s;
+    int        is_negative;
 
     c = calculate_int_length(n);
     if (n < 0)
@@ -40,19 +39,11 @@ char    *ft_itoa(int n)
         c++;
     }
     s = (char *)malloc(c +1);
-	s[c] = '\0';
+    s[c] = '\0';
     while (c-- > 0)
     {
-		printf("printa n igual a: %d\n", n);
         s[c] = (n % 10) + 48;
         n /= 10;
-		printf("é um char %c\n", s[c]);
     }
     return (s);
-}
-
-int	main(void)
-{
-	printf("kakaka %s", ft_itoa(120));
-	return (0);
 }

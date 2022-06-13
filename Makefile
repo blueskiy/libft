@@ -24,7 +24,12 @@ SRCS	=	ft_isalnum.c\
 			ft_putchar_fd.c\
 			ft_putstr_fd.c\
 			ft_putendl_fd.c\
-			ft_putnbr_fd.c
+			ft_putnbr_fd.c\
+			ft_substr.c\
+			ft_strtrim.c\
+			ft_strmapi.c\
+			ft_striteri.c\
+			ft_strjoin.c
 
 OBJS	= 	${SRCS:.c=.o}
 

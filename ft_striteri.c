@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fimachad <fimachad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/13 15:33:00 by fimachad          #+#    #+#             */
-/*   Updated: 2022/06/13 15:54:58 by fimachad         ###   ########.fr       */
+/*   Created: 2022/06/13 16:15:44 by fimachad          #+#    #+#             */
+/*   Updated: 2022/06/13 16:24:55 by fimachad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	char	*result;
-	size_t	len;
+	size_t	i;
 
-	if (s1 && set)
+	if (!s || !f)
+		return ;
+	i= 0;
+	while (s[i])
 	{
-		while (*s1 && ft_strchr(set, *s1))
-			s1++;
-		len = ft_strlen(s1);
-		while (*s1 && ft_strchr(set, s1[len]))
-			len--;
-		result = ft_substr(s1, 0, len + 1);
-		return (result);
-	}
-		
-	return (NULL);
+		f(i, &s[i]);
+		i++;
+	}	
 }
