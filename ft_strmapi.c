@@ -6,15 +6,15 @@
 /*   By: fimachad <fimachad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 15:57:30 by fimachad          #+#    #+#             */
-/*   Updated: 2022/06/13 16:09:58 by fimachad         ###   ########.fr       */
+/*   Updated: 2022/06/13 19:07:51 by fimachad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t 	i;
+	size_t	i;
 	char	*s2;
 
 	if (!s || !f)

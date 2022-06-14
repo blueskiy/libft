@@ -29,7 +29,9 @@ SRCS	=	ft_isalnum.c\
 			ft_strtrim.c\
 			ft_strmapi.c\
 			ft_striteri.c\
-			ft_strjoin.c
+			ft_strjoin.c\
+			ft_itoa.c\
+			ft_split.c
 
 OBJS	= 	${SRCS:.c=.o}
 

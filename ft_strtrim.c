@@ -6,7 +6,7 @@
 /*   By: fimachad <fimachad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 15:33:00 by fimachad          #+#    #+#             */
-/*   Updated: 2022/06/13 15:54:58 by fimachad         ###   ########.fr       */
+/*   Updated: 2022/06/13 19:08:16 by fimachad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 			len--;
 		result = ft_substr(s1, 0, len + 1);
 		return (result);
-	}
-		
+	}	
 	return (NULL);
 }
