@@ -50,6 +50,8 @@ ${NAME}:	${OBJS}
 
 all:		${NAME}
 
+bonus:		
+
 clean:		
 			${RM} ${OBJS}
 
