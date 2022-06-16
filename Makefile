@@ -35,6 +35,14 @@ SRCS	=	ft_isalnum.c\
 
 OBJS	= 	${SRCS:.c=.o}
 
+BONUS	=	ft_lstnew_bonus.c\
+			ft_lstadd_front_bonus.c\
+			ft_lstsize_bonus.c\
+			ft_lstlast_bonus.c\
+			ft_lstadd_back_bonus.c
+
+OBJS_B	=	${BONUS:.c=.o}
+
 NAME	=	libft.a
 
 CC		= 	cc
@@ -46,18 +54,19 @@ CFLAGS	= 	-Wall -Wextra -Werror
 .c.o:	= 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 ${NAME}:	${OBJS}
-			ar rc ${NAME} ${OBJS}
+			ar rcs ${NAME} ${OBJS}
 
 all:		${NAME}
 
-bonus:		
+bonus:		${NAME} ${OBJS_B}
+			ar rcs ${NAME} ${OBJS_B}
 
 clean:		
-			${RM} ${OBJS}
+			${RM} ${OBJS} ${OBJS_B}
 
 fclean: 	clean
 			${RM} ${NAME}
 
 re:			fclean all
 
-.PHONY:	all clean fclean re	
+.PHONY:	all clean fclean re	bonus
