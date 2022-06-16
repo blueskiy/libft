@@ -6,7 +6,7 @@
 /*   By: fimachad <fimachad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 21:45:00 by fimachad          #+#    #+#             */
-/*   Updated: 2022/06/15 23:11:11 by fimachad         ###   ########.fr       */
+/*   Updated: 2022/06/16 09:34:39 by fimachad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,9 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	t_list	*last;
 
 	last = *lst;
-	new->next = NULL;
-	if (!(ft_lstsize(last)))
+	if (*lst == NULL)
 	{
-		*last = new;
+		*lst = new;
 		return ;
 	}
 	while (last->next != NULL)

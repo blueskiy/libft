@@ -6,7 +6,7 @@
 /*   By: fimachad <fimachad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 19:51:30 by fimachad          #+#    #+#             */
-/*   Updated: 2022/06/15 21:02:38 by fimachad         ###   ########.fr       */
+/*   Updated: 2022/06/16 09:41:10 by fimachad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	new->next = *lst;
-	*lst = new;	
+	*lst = new;
 }

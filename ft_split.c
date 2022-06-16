@@ -6,13 +6,13 @@
 /*   By: fimachad <fimachad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 20:14:35 by fimachad          #+#    #+#             */
-/*   Updated: 2022/06/15 11:23:18 by fimachad         ###   ########.fr       */
+/*   Updated: 2022/06/16 11:05:45 by fimachad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*get_frst_chars(const char *s, char c)
+static char	*get_chars(const char *s, char c)
 {
 	size_t	k;
 	char	*str;
@@ -42,7 +42,9 @@ static size_t	ptr_count(const char *s, char c)
 	j = 0;
 	while (s[j])
 	{
-		if ((s[j] != c) && ((s[j - 1] == c) || (j == 0)))
+		if (s[j] != c && (j == 0))
+			i++;
+		else if ((s[j] != c) && ((s[j - 1] == c)))
 			i++;
 		j++;
 	}
@@ -55,8 +57,11 @@ char	**ft_split(const char *s, char c)
 	size_t	z;
 	char	**chars;
 
-	if (!s)
+	if (!s || s[k] == '\0')
 		return (NULL);
+	k = 0;
+	while (s[k] == c || s[k] == '\0')
+		k++;
 	k = 0;
 	z = 0;
 	chars = (char **)malloc((ptr_count(s, c) * sizeof(char *)) + 1);
@@ -66,7 +71,7 @@ char	**ft_split(const char *s, char c)
 	{
 		while ((s[k] == c) && s[k])
 			k++;
-		chars[z] = get_frst_chars(&s[k], c);
+		chars[z] = get_chars(&s[k], c);
 		k = k + ft_strlen(chars[z]);
 		z++;
 	}
