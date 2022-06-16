@@ -6,7 +6,7 @@
 /*   By: fimachad <fimachad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 21:18:37 by fimachad          #+#    #+#             */
-/*   Updated: 2022/06/04 11:45:59 by fimachad         ###   ########.fr       */
+/*   Updated: 2022/06/16 12:46:36 by fimachad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,20 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	int	i;
+	size_t	i;
+	char	*tmp_src;
+	size_t	src_len;
 
-	if (ft_strlen(src) == 0)
-	{
-		dst[0] = '\0';
-		return (0);
-	}
 	i = 0;
-	while (dstsize != 0)
+	tmp_src = (char *)src;
+	src_len = ft_strlen(tmp_src);
+	if (dstsize == 0)
+		return (src_len);
+	while (i < (dstsize - 1) && src[i] != '\0')
 	{
 		dst[i] = src[i];
-		dstsize--;
 		i++;
-		if (src[i - 1] == '\0')
-			break ;
 	}
-	dst[i - 1] = '\0';
-	return (ft_strlen(src));
+	dst[i] = '\0';
+	return (src_len);
 }
